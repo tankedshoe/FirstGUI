@@ -20,6 +20,7 @@ public class GUIPanel extends JPanel
 		baseLayout  = new SpringLayout();
 		
 		setupPanel();
+		setupLayout();
 	}
 	
 	/**
@@ -28,6 +29,7 @@ public class GUIPanel extends JPanel
 	 */
 	private void setupPanel()
 	{
+		this.setBackground(Color.BLUE);
 		this.setLayout(baseLayout);
 		this.add(firstButton);
 	}
@@ -37,6 +39,8 @@ public class GUIPanel extends JPanel
 	 */
 	private void setupLayout()
 	{
+		baseLayout.putConstraint(SpringLayout.NORTH, firstButton, 131, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.WEST, firstButton, 135, SpringLayout.WEST, this);
 		
 	}
 	
